@@ -25,19 +25,19 @@
     // Here we initiate the redirect process
     AppRedirect.redirect({
 
-        iosApp: 'twitter://post?message=' + qs['message'],
+        iosApp: 'sympla://explore?collection=22',
 
-        iosAppStore: 'https://itunes.apple.com/il/app/twitter/id333903271?mt=8&message=' + qs['message'],
+        iosAppStore: 'https://apps.apple.com/br/app/sympla-eventos-festas/id1136318924',
 
         // For this, your app need to have category filter: android.intent.category.BROWSABLE
         android: {
-            'host': 'post/?message=' + encodeURIComponent(qs['message']), // Host/path/querystring part in a custom scheme URL
+            //'host': 'post/?message=' + encodeURIComponent(qs['message']), // Host/path/querystring part in a custom scheme URL
             // 'action': '', // Equivalent to ACTION in INTENTs
             // 'category': '', // Equivalent to CATEGORY in INTENTs
             // 'component': '', // Equivalent to COMPONENT in INTENTs
-            'scheme': 'twitter', // Scheme part in a custom scheme URL
-            'package': 'com.twitter.android', // Package name in Play store
-            'fallback': 'https://play.google.com/store/apps/details?id=com.twitter.android&hl=en&message=' + qs['message']
+            'scheme': 'symplatickets://explore?collection_id=22&friendly=Carnaval', // Scheme part in a custom scheme URL
+            'package': 'com.sympla.tickets', // Package name in Play store
+            'fallback': 'https://play.google.com/store/apps/details?id=com.sympla.tickets&hl=pt_BR&gl=US&pli=1'
         }
 
     });
